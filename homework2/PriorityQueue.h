@@ -13,7 +13,7 @@ struct QueueNode
 	int symbol;
 	int priority;
 
-	QueueNode(int symbol=-1, int priority=INFINITY):
+	QueueNode(int symbol=-1, int priority= HUGE_VAL):
 		symbol(symbol), priority(priority)
 	{
 	}

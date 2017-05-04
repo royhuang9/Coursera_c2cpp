@@ -20,7 +20,7 @@ int main()
 		for (int n=1; n<50; n++)
 		{
 			int pathSize = sp.pathSize(graph, 0, n);
-			if (pathSize != INFINITY)
+			if (pathSize != HUGE_VAL)
 			{
 				sum += pathSize;
 				count++;

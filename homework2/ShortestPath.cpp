@@ -9,7 +9,7 @@ vector<int> ShortestPath::path(const Graph &graph, int u, int w)
 {
 	vector<int> route;
 
-	if (dijkstra(graph, u, w) == INFINITY)
+	if (dijkstra(graph, u, w) == HUGE_VAL)
 	{
 		return route;
 	}
@@ -49,9 +49,9 @@ int ShortestPath::dijkstra(const Graph &graph, int u, int w)
 		QueueNode top = pQueue.top();
 		pQueue.pop();
 
-		if (top.priority == INFINITY)
+		if (top.priority == HUGE_VAL)
 		{
-			return INFINITY;
+			return HUGE_VAL;
 		}
 
 		if (top.symbol == w)
@@ -78,5 +78,5 @@ int ShortestPath::dijkstra(const Graph &graph, int u, int w)
 		}
 	}
 
-	return INFINITY;
+	return HUGE_VAL;
 }
